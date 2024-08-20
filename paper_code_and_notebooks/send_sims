@@ -1,0 +1,128 @@
+#!/bin/bash
+## Script for PI cluster symmetry:
+#SBATCH --partition=debugq
+#SBATCH --cpus-per-task=20
+#SBATCH --exclusive
+#SBATCH --time=1:00:00
+#SBATCH --mem=180g
+#SBATCH -J -
+
+cd w
+perl -i.bak -pe 's/nSims = 20250, minSim = 20000/nSims = 25250, minSim = 25000/g' evolve-scalar.f90
+sbatch batch
+cd ..
+
+scp -r ./w ./ww
+cd ww
+perl -i.bak -pe 's/nSims = 25250, minSim = 25000/nSims = 25500, minSim = 25250/g' evolve-scalar.f90
+sbatch batch
+cd ..
+
+scp -r ./w ./www
+cd www
+perl -i.bak -pe 's/nSims = 25250, minSim = 25000/nSims = 25750, minSim = 25500/g' evolve-scalar.f90
+sbatch batch
+cd ..
+
+scp -r ./w ./wwww
+cd wwww
+perl -i.bak -pe 's/nSims = 25250, minSim = 25000/nSims = 26000, minSim = 25750/g' evolve-scalar.f90
+sbatch batch
+cd ..
+
+scp -r ./w ./wwwww
+cd wwwww
+perl -i.bak -pe 's/nSims = 25250, minSim = 25000/nSims = 26250, minSim = 26000/g' evolve-scalar.f90
+sbatch batch
+cd ..
+
+scp -r ./w ./wwwwww
+cd wwwwww
+perl -i.bak -pe 's/nSims = 25250, minSim = 25000/nSims = 26500, minSim = 26250/g' evolve-scalar.f90
+sbatch batch
+cd ..
+
+scp -r ./w ./wwwwwww
+cd wwwwwww
+perl -i.bak -pe 's/nSims = 25250, minSim = 25000/nSims = 26750, minSim = 26500/g' evolve-scalar.f90
+sbatch batch
+cd ..
+
+scp -r ./w ./wwwwwwww
+cd wwwwwwww
+perl -i.bak -pe 's/nSims = 25250, minSim = 25000/nSims = 27000, minSim = 26750/g' evolve-scalar.f90
+sbatch batch
+cd ..
+
+scp -r ./w ./wwwwwwwww
+cd wwwwwwwww
+perl -i.bak -pe 's/nSims = 25250, minSim = 25000/nSims = 27250, minSim = 27000/g' evolve-scalar.f90
+sbatch batch
+cd ..
+
+scp -r ./w ./wwwwwwwwww
+cd wwwwwwwwww
+perl -i.bak -pe 's/nSims = 25250, minSim = 25000/nSims = 27500, minSim = 27250/g' evolve-scalar.f90
+sbatch batch
+cd ..
+
+scp -r ./w ./wwwwwwwwwww
+cd wwwwwwwwwww
+perl -i.bak -pe 's/nSims = 25250, minSim = 25000/nSims = 27750, minSim = 27500/g' evolve-scalar.f90
+sbatch batch
+cd ..
+
+scp -r ./w ./wwwwwwwwwwww
+cd wwwwwwwwwwww
+perl -i.bak -pe 's/nSims = 25250, minSim = 25000/nSims = 28000, minSim = 27750/g' evolve-scalar.f90
+sbatch batch
+cd ..
+
+scp -r ./w ./wwwwwwwwwwwww
+cd wwwwwwwwwwwww
+perl -i.bak -pe 's/nSims = 25250, minSim = 25000/nSims = 28250, minSim = 28000/g' evolve-scalar.f90
+sbatch batch
+cd ..
+
+scp -r ./w ./wwwwwwwwwwwwww
+cd wwwwwwwwwwwwww
+perl -i.bak -pe 's/nSims = 25250, minSim = 25000/nSims = 28500, minSim = 28250/g' evolve-scalar.f90
+sbatch batch
+cd ..
+
+scp -r ./w ./wwwwwwwwwwwwwww
+cd wwwwwwwwwwwwwww
+perl -i.bak -pe 's/nSims = 25250, minSim = 25000/nSims = 28750, minSim = 28500/g' evolve-scalar.f90
+sbatch batch
+cd ..
+
+scp -r ./w ./wwwwwwwwwwwwwwww
+cd wwwwwwwwwwwwwwww
+perl -i.bak -pe 's/nSims = 25250, minSim = 25000/nSims = 29000, minSim = 28750/g' evolve-scalar.f90
+sbatch batch
+cd ..
+
+scp -r ./w ./wwwwwwwwwwwwwwwww
+cd wwwwwwwwwwwwwwwww
+perl -i.bak -pe 's/nSims = 25250, minSim = 25000/nSims = 29250, minSim = 29000/g' evolve-scalar.f90
+sbatch batch
+cd ..
+
+scp -r ./w ./wwwwwwwwwwwwwwwwww
+cd wwwwwwwwwwwwwwwwww
+perl -i.bak -pe 's/nSims = 25250, minSim = 25000/nSims = 29500, minSim = 29250/g' evolve-scalar.f90
+sbatch batch
+cd ..
+
+scp -r ./w ./wwwwwwwwwwwwwwwwwww
+cd wwwwwwwwwwwwwwwwwww
+perl -i.bak -pe 's/nSims = 25250, minSim = 25000/nSims = 29750, minSim = 29500/g' evolve-scalar.f90
+sbatch batch
+cd ..
+
+scp -r ./w ./wwwwwwwwwwwwwwwwwwww
+cd wwwwwwwwwwwwwwwwwwww
+perl -i.bak -pe 's/nSims = 25250, minSim = 25000/nSims = 30000, minSim = 29750/g' evolve-scalar.f90
+sbatch batch
+cd ..
+
