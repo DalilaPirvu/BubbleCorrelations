@@ -1,0 +1,8 @@
+#!/bin/bash
+## Script for PI cluster symmetry:
+#SBATCH --partition=debugq
+#SBATCH --time=1:00:00
+
+make clean
+make
+./scalar-1d
